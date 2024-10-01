@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit post: the art of productive coding</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav class="navbar">
+                <a href="index.html">home</a>
+            </nav>
+        </header>
+        
+        <main>
+            <section class="form-container">
+                <h1>edit post</h1>
+                <form action="edit-success.html" method="get">
+                    <div class="form-group">
+                        <label for="title">title</label>
+                        <input type="text" id="title" name="title" value="the art of productive coding" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subtitle">subtitle</label>
+                        <input type="text" id="subtitle" name="subtitle" value="boost your coding efficiency and productivity">
+                    </div>
+                    <div class="form-group">
+                        <label for="image-url">image url</label>
+                        <input type="url" id="image-url" name="image-url" value="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d">
+                    </div>
+                    <div class="form-group">
+                        <label for="body">body text</label>
+                        <textarea id="body" name="body" rows="10" required>in this post, we'll explore various techniques to boost your coding efficiency and productivity. from setting up the perfect development environment to mastering keyboard shortcuts, we'll cover all the essentials that can help you become a more productive coder.
+
+we'll also discuss the importance of taking regular breaks, the pomodoro technique, and how to effectively manage your time when working on complex projects. by the end of this article, you'll have a toolkit of strategies to enhance your coding productivity.</textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit">update post</button>
+                        <a href="post1.html" class="btn-cancel">cancel</a>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
