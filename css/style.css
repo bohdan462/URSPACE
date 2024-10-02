@@ -47,7 +47,7 @@ h1, h2, h3, h4, h5, h6 {
 .container {
     max-width: 750px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 15px;
 }
 
 .navbar {
@@ -235,7 +235,6 @@ h1, h2, h3, h4, h5, h6 {
 .post-detail {
     background-color: var(--bg-color);
     padding: 40px 20px;
-    margin-top: 40px;
 }
 
 .post-detail .post-image {
@@ -451,7 +450,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .container {
-        padding: 20px;
+        padding: 15px 15px;
     }
 
     .post-detail .post-title {
