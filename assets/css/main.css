@@ -5,29 +5,13 @@
 @import url('form.css');
 @import url('author.css');
 
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Merriweather', serif;
-    color: var(--primary-color);
-    margin-top: 1.5em;
-    margin-bottom: 0.5em;
-}
-
-p {
-    margin-bottom: 1.5em;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+ 
 
 .page-title {
     font-size: 2.5rem;
     color: var(--primary-color);
     text-align: center;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     text-transform: uppercase;
     letter-spacing: 2px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
@@ -89,17 +73,30 @@ p {
 
 /* Footer */
 .footer {
+    width: 100%;
     background-color: var(--surface-color);
     color: var(--on-surface-medium);
     padding: 40px 0;
     margin-top: 60px;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    clear: both; /* Clear any floating elements */
 }
 
 .footer-content {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Stack items vertically by default */
+    justify-content: center;
     align-items: center;
+    max-width: 1200px; /* Ensure content doesn't stretch too wide */
+    margin: 0 auto; /* Center the content */
+    padding: 0 15px; /* Add some padding for smaller screens */
+}
+
+.footer-links, .footer-social {
+    display: flex;
+    justify-content: center;
     flex-wrap: wrap;
+    margin: 10px 0; /* Add some margin for spacing */
 }
 
 .footer-links a, .footer-social a {
@@ -114,22 +111,7 @@ p {
 }
 
 .footer-social a {
-    font-size: 1.5rem;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    .container {
-        padding: 0 15px;
-    }
-
-    .footer-content {
-        flex-direction: column;
-    }
-
-    .footer-links, .footer-social {
-        margin-top: 20px;
-    }
+    font-size: 1rem;
 }
 
 /* Add this to the existing styles */
@@ -162,7 +144,81 @@ p {
     opacity: 0.1;
     font-size: 24px;
     color: var(--primary-color);
-    pointer-events: none;
+    pointer-events: none;    .post-author a {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: 100;
+    }
+    
+    .post-author a:hover {
+        text-decoration: underline;
+    }
+    
+    /* Floating shapes */
+    .floating-shape {
+        position: fixed;
+        opacity: 0.1;
+        font-size: 24px;
+        color: var(--primary-color);
+        pointer-events: none;
+        z-index: -1;
+        font-family: 'Roboto Mono', monospace;
+        text-shadow: 0 0 10px var(--primary-color);
+        animation: float 20s infinite, glow 2s infinite alternate;
+    }
+    
+    .shape1 { top: 5%; left: 5%; font-size: 36px; }
+    .shape2 { top: 20%; right: 10%; font-size: 28px; }
+    .shape3 { bottom: 15%; left: 15%; font-size: 32px; }
+    .shape4 { top: 40%; right: 5%; font-size: 30px; }
+    .shape5 { bottom: 10%; right: 20%; font-size: 34px; }
+    .shape6 { top: 60%; left: 10%; font-size: 26px; }
+    .shape7 { top: 80%; right: 15%; font-size: 38px; }
+    .shape8 { bottom: 30%; left: 25%; font-size: 28px; }
+    
+    @keyframes float {
+        0%, 100% { transform: translate(0, 0) rotate(0deg); }
+        25% { transform: translate(-15px, 15px) rotate(5deg); }
+        50% { transform: translate(15px, -15px) rotate(-5deg); }
+        75% { transform: translate(-10px, -10px) rotate(3deg); }
+    }
+    
+    @keyframes glow {
+        0% { text-shadow: 0 0 10px var(--primary-color); }
+        100% { text-shadow: 0 0 20px var(--primary-color), 0 0 30px var(--primary-color); }
+    }
+    
+    /* Adjust the "Latest Posts" title */
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    /* Responsive design */
+    @media (max-width: 768px) {
+        .footer-links a {
+            font-size: 2rem;
+        }
+        .section-title {
+            font-size: 2rem; /* Shrink font size for smaller screens */
+        }
+    
+        .post-author a {
+            font-size: 0.9rem; /* Adjust font size for smaller screens */
+        }
+    
+        .floating-shape {
+            font-size: 18px; /* Adjust floating shapes font size for smaller screens */
+        }
+    
+        .shape1 { font-size: 28px; }
+        .shape2 { font-size: 22px; }
+        .shape3 { font-size: 26px; }
+        .shape4 { font-size: 24px; }
+        .shape5 { font-size: 28px; }
+        .shape6 { font-size: 20px; }
+        .shape7 { font-size: 30px; }
+        .shape8 { font-size: 22px; }
+    }
     z-index: -1;
     font-family: 'Roboto Mono', monospace;
     text-shadow: 0 0 10px var(--primary-color);
@@ -216,11 +272,6 @@ p {
 
 .search-input::placeholder {
     color: rgba(255, 255, 255, 0.5);
-}
-
-/* Add more color to the page */
-body {
-    background: linear-gradient(135deg, var(--bg-color) 0%, var(--surface-color) 100%);
 }
 
 /* Add dark gradient to the top corner of post image */
