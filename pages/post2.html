@@ -3,24 +3,52 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mastering the Developer Mindset | URSPACE</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>The Art of Productive Coding | URSPACE</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
 <body>
-    <div class="container">
-        <header>
-            <nav class="navbar">
-                <div class="navbar-container">
-                    <a href="index.html" class="logo">URSPACE</a>
+    <div class="floating-shape shape1"></div>
+    <div class="floating-shape shape2"></div>
+    <div class="floating-shape shape3"></div>
+
+    <header>
+        <nav class="navbar">
+            <div class="navbar-container container">
+                <a href="../index.html" class="logo">URSPACE</a>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="nav-links">
+                    <a href="#" class="btn-subscribe">Subscribe</a>
+                    <a href="#" class="btn-follow">Follow</a>
                     <a href="newpost.html" class="btn-new-post">New post</a>
                 </div>
-            </nav>
-        </header>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li><a href="../index.html">Home</a></li>
+                <li>Mastering the Developer Mindset</li>
+            </ol>
+        </nav>
         
         <main>
             <article class="post-detail">
-                <img class="post-image" src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2" alt="person writing in notebook">
-                <span class="tag career">career</span>
                 <h1 class="post-title">Mastering the Developer Mindset</h1>
+                <img class="post-image" src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2" alt="person writing in notebook">
+                <div class="post-author-info">
+                    <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d" alt="John Doe" class="post-author-avatar">
+                    <div>
+                        <a href="author.html" class="post-author-name">John Doe</a>
+                        <span class="post-date">September 20, 2024</span>
+                    </div>
+                </div>
+    
                 <div class="post-content">
                     <p class="lead">Developing a strong mindset is crucial for success in the ever-evolving world of software development. In this post, we'll explore key aspects of the developer mindset and how to cultivate them.</p>
                     
@@ -72,8 +100,8 @@
                     <span class="share-icon">🔗</span>
                 </footer>
                 <div class="post-actions">
-                    <a href="post1-edit.html" class="btn-edit">Edit</a>
-                    <a href="delete-confirm.html" class="btn-delete">Delete</a>
+                    <a href="../pages/post1-edit.html" class="btn-edit">Edit</a>
+                    <a href="../pages/delete-confirm.html" class="btn-delete">Delete</a>
                 </div>
             </article>
         </main>

@@ -4,104 +4,174 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>URSPACE blog</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <nav class="navbar">
-                <div class="navbar-container">
-                    <div class="logo-search-section">
-                        <a href="index.html" class="logo">URSPACE</a>
-                        <div class="search-section">
-                            <input type="text" placeholder="Search..." class="search-input">
-                            <button class="search-button">🔍</button>
-                        </div>
-                    </div>
-                    <div class="nav-links">
-                        <a href="newpost.html" class="btn-new-post">New post</a>
-                    </div>
+    <div class="floating-shape shape1">{ }</div>
+    <div class="floating-shape shape2">( )</div>
+    <div class="floating-shape shape3">[ ]</div>
+    <div class="floating-shape shape4">&lt; &gt;</div>
+    <div class="floating-shape shape5">// </div>
+    <div class="floating-shape shape6">/* */</div>
+    <div class="floating-shape shape7">$ _</div>
+    <div class="floating-shape shape8"># !</div>
+
+    <header>
+        <nav class="navbar">
+            <div class="navbar-container container">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">UR</span><span class="logo-highlight">SPACE</span>
+                </a>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                    <button type="submit"><i class="fas fa-search"></i></button>
                 </div>
-                <a href="#subscribe" class="subscribe-link">subscribe</a>
-            </nav>
-        </header>
-        
+                <div class="nav-links">
+                    <a href="#" class="btn-subscribe">Subscribe</a>
+                    <a href="pages/newpost.html" class="btn-new-post">New post</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
         <main>
-            <section id="home" class="post-grid">
-                <a href="post1.html" class="post-cell">
+            <h1 class="page-title">Latest Posts</h1>
+            <section class="post-grid">
+                <a href="pages/post1.html" class="post-cell">
                     <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d" alt="laptop on desk">
                     <div class="content">
-                        <span class="tag programming">programming</span>
+                        <span class="tag productivity">productivity</span>
                         <h2>The Art of Productive Coding</h2>
-                        <p>Discover techniques to boost your coding efficiency and productivity...</p>
-                        <div class="stats">
-                            <span>👍 124 likes</span>
-                            <span>💬 18 comments</span>
+                        <p>Explore techniques to boost your coding efficiency and productivity.</p>
+                        <div class="meta">
+                            <span class="author">22h ago</span>
+                            <div class="stats">
+                                <span><i class="fas fa-thumbs-up"></i> 145</span>
+                                <span><i class="fas fa-comment"></i> 28</span>
+                            </div>
+                        </div>
+                        <div class="post-author">
+                            <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"" alt="Author Name">
+                            <a href="pages/author.html">@applewood</a>
                         </div>
                     </div>
                 </a>
-                <a href="post2.html" class="post-cell">
-                    <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2" alt="person writing in notebook">
-                    <div class="content">
-                        <span class="tag career">career</span>
-                        <h2>Mastering the Developer Mindset</h2>
-                        <p>Learn how to think like a successful developer and overcome common challenges...</p>
-                        <div class="stats">
-                            <span>👍 89 likes</span>
-                            <span>💬 12 comments</span>
-                        </div>
-                    </div>
-                </a>
-                <a href="post3.html" class="post-cell">
-                    <img src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e" alt="laptop and coffee">
-                    <div class="content">
-                        <span class="tag lifestyle">lifestyle</span>
-                        <h2>Balancing Work and Life as a Developer</h2>
-                        <p>Tips for maintaining a healthy work-life balance in the tech industry...</p>
-                        <div class="stats">
-                            <span>👍 156 likes</span>
-                            <span>💬 23 comments</span>
-                        </div>
-                    </div>
-                </a>
-                <a href="post4.html" class="post-cell">
+                <a href="pages/post2.html" class="post-cell">
                     <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97" alt="code on screen">
                     <div class="content">
-                        <span class="tag web-development">web development</span>
-                        <h2>Modern Frontend Frameworks Compared</h2>
-                        <p>An in-depth look at React, Vue, and Angular: which one should you choose?</p>
-                        <div class="stats">
-                            <span>👍 210 likes</span>
-                            <span>💬 45 comments</span>
+                        <span class="tag algorithms">algorithms</span>
+                        <h2>Mastering Data Structures</h2>
+                        <p>A deep dive into essential data structures for efficient programming.</p>
+                        <div class="meta">
+                            <span class="author">1d ago</span>
+                            <div class="stats">
+                                <span><i class="fas fa-thumbs-up"></i> 132</span>
+                                <span><i class="fas fa-comment"></i> 23</span>
+                            </div>
+                        </div>
+                        <div class="post-author">
+                            <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"" alt="Author Name">
+                            <a href="pages/author.html">@43introtech</a>
                         </div>
                     </div>
                 </a>
-                <a href="post5.html" class="post-cell">
+                <a href="pages/post3.html" class="post-cell">
+                    <img src="https://images.unsplash.com/photo-1551033406-611cf9a28f67" alt="server racks">
+                    <div class="content">
+                        <span class="tag cloud">cloud</span>
+                        <h2>Cloud Computing Essentials</h2>
+                        <p>Understanding the fundamentals of cloud architecture and deployment.</p>
+                        <div class="meta">
+                            <span class="author">24d ago</span>
+                            <div class="stats">
+                                <span><i class="fas fa-thumbs-up"></i> 98</span>
+                                <span><i class="fas fa-comment"></i> 15</span>
+                            </div>
+                        </div>
+                        <div class="post-author">
+                            <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"" alt="Author Name">
+                            <a href="pages/author.html">@canchie</a>
+                        </div>
+                    </div>
+                </a>
+                <a href="pages/post4.html" class="post-cell">
+                    <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb" alt="modern office space">
+                    <div class="content">
+                        <span class="tag frontend">frontend</span>
+                        <h2>Modern Frontend Frameworks Compared</h2>
+                        <p>An in-depth look at popular frontend frameworks and their use cases.</p>
+                        <div class="meta">
+                            <span class="author">1w ago</span>
+                            <div class="stats">
+                                <span><i class="fas fa-thumbs-up"></i> 210</span>
+                                <span><i class="fas fa-comment"></i> 45</span>
+                            </div>
+                        </div>
+                        <div class="post-author">
+                            <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"" alt="Author Name">
+                            <a href="pages/author.html">@applewood</a>
+                        </div>
+                    </div>
+                </a>
+                <a href="pages/post5.html" class="post-cell">
                     <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5" alt="binary code">
                     <div class="content">
                         <span class="tag cybersecurity">cybersecurity</span>
                         <h2>Essential Security Practices for Developers</h2>
-                        <p>Protect your applications from common vulnerabilities and threats...</p>
-                        <div class="stats">
-                            <span>👍 178 likes</span>
-                            <span>💬 32 comments</span>
+                        <p>Key security measures every developer should implement in their projects.</p>
+                        <div class="meta">
+                            <span class="author">5m ago</span>
+                            <div class="stats">
+                                <span><i class="fas fa-thumbs-up"></i> 178</span>
+                                <span><i class="fas fa-comment"></i> 32</span>
+                            </div>
+                        </div>
+                        <div class="post-author">
+                            <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"" alt="Author Name">
+                            <a href="pages/author.html">@tech_talk</a>
                         </div>
                     </div>
                 </a>
-                <a href="post6.html" class="post-cell">
+                <a href="pages/post6.html" class="post-cell">
                     <img src="https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2" alt="server room">
                     <div class="content">
                         <span class="tag devops">devops</span>
                         <h2>Mastering CI/CD for Efficient Development</h2>
-                        <p>Streamline your development process with continuous integration and deployment...</p>
-                        <div class="stats">
-                            <span>👍 145 likes</span>
-                            <span>💬 28 comments</span>
+                        <p>Streamline your development process with Continuous Integration and Deployment.</p>
+                        <div class="meta">
+                            <span class="author">3d ago</span>
+                            <div class="stats">
+                                <span><i class="fas fa-thumbs-up"></i> 145</span>
+                                <span><i class="fas fa-comment"></i> 28</span>
+                            </div>
+                        </div>
+                        <div class="post-author">
+                            <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"" alt="Author Name">
+                            <a href="pages/author.html">@_devops</a>
                         </div>
                     </div>
                 </a>
             </section>
         </main>
     </div>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-links">
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

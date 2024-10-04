@@ -1,0 +1,131 @@
+:root {
+    --bg-color: #121212;
+    --surface-color: #181818;
+    --surface-color-hover: #282828;
+    --primary-color: #1DB954;
+    --primary-color-dark: #1ED760;
+    --secondary-color: #FF6B6B;
+    --tertiary-color: #4ECDC4;
+    --on-surface-color: #FFFFFF;
+    --on-surface-medium: #B3B3B3;
+    --on-surface-dim: #A0A0A0;
+    --navbar-bg: #181818;
+    --navbar-shadow: rgba(0, 0, 0, 0.5);
+    --error-color: #E0245E;
+    
+    --surface-color-rgb: 24, 24, 24;
+    --primary-color-rgb: 29, 185, 84;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #121212;
+        --surface-color: #181818;
+        --surface-color-hover: #282828;
+        --primary-color: #1DB954;
+        --primary-color-dark: #1ED760;
+        --secondary-color: #FF6B6B;
+        --tertiary-color: #4ECDC4;
+        --on-surface-color: #FFFFFF;
+        --on-surface-medium: #B3B3B3;
+        --on-surface-dim: #A0A0A0;
+        --navbar-bg: #181818;
+        --navbar-shadow: rgba(0, 0, 0, 0.5);
+        --error-color: #E0245E;
+        
+        --surface-color-rgb: 24, 24, 24;
+        --primary-color-rgb: 29, 185, 84;
+    }
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--on-surface-color);
+    background: linear-gradient(135deg, var(--bg-color) 0%, var(--surface-color) 100%);
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', Georgia, serif;
+    color: var(--primary-color);
+    line-height: 1.3;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 1.5em;
+}
+
+blockquote {
+    font-family: 'Merriweather', Georgia, serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--on-surface-medium);
+    border-left: 4px solid var(--primary-color);
+    padding-left: 1.5em;
+    margin: 2em 0;
+}
+
+code {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9em;
+    background-color: rgba(var(--primary-color-rgb), 0.1);
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+}
+
+pre code {
+    display: block;
+    padding: 1em;
+    overflow-x: auto;
+    line-height: 1.4;
+}
+
+strong {
+    font-weight: 600;
+    color: var(--on-surface-color);
+}
+
+em {
+    font-style: italic;
+}
+
+ul, ol {
+    margin-bottom: 1.5em;
+    padding-left: 1.5em;
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
+
+@media (max-width: 768px) {
+
+    body {
+        letter-spacing: 0;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        letter-spacing: -0.01em;
+    }
+}

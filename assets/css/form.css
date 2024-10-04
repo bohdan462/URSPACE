@@ -1,0 +1,99 @@
+.form-container {
+    background-color: var(--surface-color);
+    border-radius: 12px;
+    padding: 40px;
+    margin-top: 40px;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--on-surface-color);
+    font-size: 16px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--on-surface-dim);
+    border-radius: 8px;
+    background-color: var(--bg-color);
+    color: var(--on-surface-color);
+    font-size: 16px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--on-surface-dim);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+
+.form-actions button,
+.form-actions .btn-cancel {
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    margin-left: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.form-actions button {
+    background-color: var(--primary-color);
+    color: var(--on-surface-color);
+}
+
+.form-actions .btn-cancel {
+    background-color: #E0245E;
+    color: var(--on-surface-color);
+}
+
+.confirm-delete,
+.success-message {
+    background-color: var(--surface-color);
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.confirm-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.btn-confirm,
+.btn-cancel,
+.btn-primary {
+    padding: 12px 24px;
+    text-decoration: none;
+    color: var(--on-surface-color);
+    border-radius: 30px;
+    margin: 0 10px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 0.03em;
+}
+
+.btn-confirm {
+    background-color: #E0245E;
+}
+
+.btn-cancel,
+.btn-primary {
+    background-color: var(--primary-color);
+}
