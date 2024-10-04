@@ -1,6 +1,6 @@
 .post-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
     /* margin-top: 40px; */
 }
@@ -13,6 +13,11 @@
     transition: all 0.3s ease;
     text-decoration: none;
     color: var(--on-surface-color);
+}
+
+.post-cell {
+    animation: fadeInUp 0.5s ease-out;
+    animation-fill-mode: both;
 }
 
 .post-cell:hover {
@@ -74,11 +79,14 @@
     margin-bottom: 20px;
 }
 
-.post-title {
+.page-title {
     font-size: 2.5rem;
     color: var(--primary-color);
-    margin-bottom: 20px;
-    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .post-content {
@@ -138,6 +146,7 @@
     justify-content: flex-end;
 }
 
+
 .btn-edit, .btn-delete {
     padding: 10px 20px;
     border-radius: 25px;
@@ -145,6 +154,7 @@
     font-weight: 600;
     margin-left: 10px;
 }
+
 
 .btn-edit {
     background-color: var(--primary-color);
@@ -154,6 +164,83 @@
 .btn-delete {
     background-color: #E0245E;
     color: var(--surface-color);
+}
+.post-author {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.post-author img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post-author a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 100;
+}
+
+.post-author a:hover {
+    text-decoration: underline;
+}
+
+.post-author-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post-author-name {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 100;
+}
+
+.post-author-name:hover {
+    text-decoration: underline;
+}
+
+.post-cell {
+    position: relative;
+    background-color: var(--surface-color);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: var(--on-surface-color);
+}
+
+.post-cell:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.post-cell img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.post-cell .content {
+    padding: 20px;
+}
+
+.post-cell h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: var(--on-surface-color);
+}
+
+.post-cell p {
+    font-size: 1rem;
+    color: var(--on-surface-medium);
+    margin-bottom: 10px;
 }
 
 @media (max-width: 768px) {

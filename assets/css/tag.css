@@ -1,0 +1,23 @@
+
+.tag {
+    position: absolute;
+    background-color: var(--tertiary-color);
+    color: var(--surface-color);
+    top: 10px;
+    left: 10px;
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 1;
+}
+
+.tag.productivity { background-color: rgba(76, 175, 80, 0.8); color: white; }
+.tag.algorithms { background-color: rgba(33, 150, 243, 0.8); color: white; }
+.tag.cloud { background-color: rgba(3, 169, 244, 0.8); color: white; }
+.tag.frontend { background-color: rgba(255, 87, 34, 0.8); color: white; }
+.tag.cybersecurity { background-color: rgba(96, 125, 139, 0.8); color: white; }
+.tag.devops { background-color: rgba(156, 39, 176, 0.8); color: white; }

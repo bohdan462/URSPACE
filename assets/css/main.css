@@ -4,18 +4,10 @@
 @import url('posts.css');
 @import url('form.css');
 @import url('author.css');
+@import url('navbar.css');
+@import url('tag.css');
 
- 
 
-.page-title {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    text-align: center;
-    /* margin-bottom: 30px; */
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-}
 /* Animations */
 @keyframes fadeInUp {
     from {
@@ -26,11 +18,6 @@
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-.post-cell {
-    animation: fadeInUp 0.5s ease-out;
-    animation-fill-mode: both;
 }
 
 .post-cell:nth-child(1) { animation-delay: 0.1s; }
@@ -138,87 +125,13 @@
     text-decoration: underline;
 }
 
-/* Floating shapes */
+* Floating shapes */
 .floating-shape {
     position: fixed;
     opacity: 0.1;
     font-size: 24px;
     color: var(--primary-color);
-    pointer-events: none;    .post-author a {
-        color: var(--primary-color);
-        text-decoration: none;
-        font-weight: 100;
-    }
-    
-    .post-author a:hover {
-        text-decoration: underline;
-    }
-    
-    /* Floating shapes */
-    .floating-shape {
-        position: fixed;
-        opacity: 0.1;
-        font-size: 24px;
-        color: var(--primary-color);
-        pointer-events: none;
-        z-index: -1;
-        font-family: 'Roboto Mono', monospace;
-        text-shadow: 0 0 10px var(--primary-color);
-        animation: float 20s infinite, glow 2s infinite alternate;
-    }
-    
-    .shape1 { top: 5%; left: 5%; font-size: 36px; }
-    .shape2 { top: 20%; right: 10%; font-size: 28px; }
-    .shape3 { bottom: 15%; left: 15%; font-size: 32px; }
-    .shape4 { top: 40%; right: 5%; font-size: 30px; }
-    .shape5 { bottom: 10%; right: 20%; font-size: 34px; }
-    .shape6 { top: 60%; left: 10%; font-size: 26px; }
-    .shape7 { top: 80%; right: 15%; font-size: 38px; }
-    .shape8 { bottom: 30%; left: 25%; font-size: 28px; }
-    
-    @keyframes float {
-        0%, 100% { transform: translate(0, 0) rotate(0deg); }
-        25% { transform: translate(-15px, 15px) rotate(5deg); }
-        50% { transform: translate(15px, -15px) rotate(-5deg); }
-        75% { transform: translate(-10px, -10px) rotate(3deg); }
-    }
-    
-    @keyframes glow {
-        0% { text-shadow: 0 0 10px var(--primary-color); }
-        100% { text-shadow: 0 0 20px var(--primary-color), 0 0 30px var(--primary-color); }
-    }
-    
-    /* Adjust the "Latest Posts" title */
-    .section-title {
-        font-size: 2.5rem;
-    }
-    
-    /* Responsive design */
-    @media (max-width: 768px) {
-        .footer-links a {
-            font-size: 2rem;
-        }
-        .section-title {
-            font-size: 2rem; /* Shrink font size for smaller screens */
-        }
-    
-        .post-author a {
-            font-size: 0.9rem; /* Adjust font size for smaller screens */
-        }
-    
-        .floating-shape {
-            font-size: 18px; /* Adjust floating shapes font size for smaller screens */
-        }
-    
-        .shape1 { font-size: 28px; }
-        .shape2 { font-size: 22px; }
-        .shape3 { font-size: 26px; }
-        .shape4 { font-size: 24px; }
-        .shape5 { font-size: 28px; }
-        .shape6 { font-size: 20px; }
-        .shape7 { font-size: 30px; }
-        .shape8 { font-size: 22px; }
-    }
+    pointer-events: none;
     z-index: -1;
     font-family: 'Roboto Mono', monospace;
     text-shadow: 0 0 10px var(--primary-color);
@@ -258,28 +171,13 @@
 }
 
 /* Make navbar stick when scrolling */
-.navbar {
+/* .navbar {
     position: sticky;
     top: 0;
     z-index: 1000;
-}
+} */
 
-/* Adjust color of search field */
-.search-input {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: var(--on-surface-color);
-}
-
-.search-input::placeholder {
-    color: rgba(255, 255, 255, 0.5);
-}
-
-/* Add dark gradient to the top corner of post image */
-.post-cell img {
-    position: relative;
-}
-
-.post-cell img::after {
+/* .post-cell img::after {
     content: '';
     position: absolute;
     top: 0;
@@ -288,4 +186,4 @@
     height: 100px;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
     pointer-events: none;
-}
+} */
