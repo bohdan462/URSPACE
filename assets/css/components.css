@@ -1,11 +1,15 @@
+
+
 .container {
     max-width: 750px !important;
     /* margin: 10px auto !important; */
     padding: 20px !important;
+    
 } 
 
 .home-container {
-     margin: 10px auto;
+    margin: 5px;
+    margin-top: 5rem;
 }
 
 
@@ -24,4 +28,17 @@ a:hover {
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Media query for small screens */
+@media (max-width: 600px) {
+    .home-container {
+        margin: 5px;
+        margin-top: 2rem;
+    }
+
+    .card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
 }
