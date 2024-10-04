@@ -1,17 +1,12 @@
-
-
 .container {
-    max-width: 750px !important;
-    /* margin: 10px auto !important; */
-    padding: 20px !important;
-    
-} 
-
-.home-container {
-    margin: 5px;
-    margin-top: 5rem;
+    max-width: 750px;
+    margin: var(--space-m) auto;
+    padding: var(--space-l);
 }
 
+.home-container {
+    margin-top: 4rem;
+}
 
 a {
     transition: all 0.3s ease;
@@ -34,11 +29,57 @@ a:hover {
 @media (max-width: 600px) {
     .home-container {
         margin: 5px;
-        margin-top: 2rem;
+        margin-top: 4rem;
+    }
+
+    .page-title {
+        font-size: 0.9rem;
     }
 
     .card:hover {
         transform: translateY(-3px);
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .page-title {
+        font-size: 1rem;
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+        font-weight: 500;
+        position: relative;
+        padding-left: 0.5rem;
+        border-left: 2px solid var(--primary-color);
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: calc(var(--base-font-size) * 0.9);
+    }
+
+    .page-title {
+        font-size: var(--h3);
+    }
+}
+
+.welcome-message {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: var(--on-surface-medium);
+    font-weight: 400;
+    margin-bottom: var(--space-m);
+    padding-left: var(--space-s);
+    border-left: 2px solid var(--primary-color);
+    line-height: 1.4;
+}
+
+.welcome-message strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .welcome-message {
+        font-size: 0.9rem;
     }
 }

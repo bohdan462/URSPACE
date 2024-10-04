@@ -14,19 +14,29 @@
         
     <header>
         <nav class="navbar">
-            <div class="navbar-container container">
+            <div class="navbar-container">
                 <a href="../index.html" class="logo">URSPACE</a>
                 <div class="search-bar">
                     <input type="text" placeholder="Search...">
-                    <button type="submit"><i class="fas fa-search"></i></button>
+                    <!-- <button type="submit"><i class="fas fa-search"></i></button> -->
                 </div>
-                <div class="nav-links">
-                    <a href="#" class="btn-new-post">Subscribe</a>
-                    <a href="#" class="btn-follow">Follow</a>
-                    <a href="newpost.html" class="btn-new-post">New post</a>
-                </div>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </nav>
+    </header>
+
+    <div class="side-menu">
+        <button class="side-menu-close" aria-label="Close menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="side-menu-links">
+            <a href="../index.html" class="btn-back">Back to Home</a>
+            <a href="pages/subscribe.html" class="btn-subscribe">Subscribe</a>
+            <a href="pages/newpost.html" class="btn-new-post">New post</a>
+        </div>
+    </div>
     </header>
 
     <div class="container"> 
@@ -108,8 +118,7 @@
     <footer class="footer">
         <div class="container footer-content">
             <div class="footer-links">
-                <a href="#">About</a>
-                <a href="#">Contact</a>
+                <a href="pages/about.html">About</a>
                 <a href="#">Privacy Policy</a>
                 <a href="#">Terms of Service</a>
             </div>
@@ -121,5 +130,6 @@
             </div>
         </div>
     </footer>
+    <script src="../assets/js/side-menu.js"></script>
 </body>
 </html>
