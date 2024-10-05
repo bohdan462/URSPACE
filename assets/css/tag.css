@@ -1,23 +1,25 @@
 
 .tag {
     position: absolute;
-    background-color: var(--tertiary-color);
     color: var(--surface-color);
-    top: 10px;
-    left: 10px;
+    top: 14px;
+    left: 12px;
     display: inline-block;
     padding: 4px 8px;
-    border-radius: 4px;
+    border-radius: 8px;
     font-size: 0.8rem;
     font-weight: 600;
+    box-shadow: 0 -4px 5px 10px  rgba(0, 0, 0, 0.1),
+                0 4px 5px 10px rgba(0, 0, 0, 0.1);
+
     text-transform: uppercase;
     letter-spacing: 0.5px;
     z-index: 1;
 }
 
-.tag.productivity { background-color: rgba(76, 175, 80, 0.8); color: white; }
-.tag.algorithms { background-color: rgba(33, 150, 243, 0.8); color: white; }
-.tag.cloud { background-color: rgba(3, 169, 244, 0.8); color: white; }
-.tag.frontend { background-color: rgba(255, 87, 34, 0.8); color: white; }
-.tag.cybersecurity { background-color: rgba(96, 125, 139, 0.8); color: white; }
-.tag.devops { background-color: rgba(156, 39, 176, 0.8); color: white; }
+.tag.productivity { background-color: rgba(76, 175, 80, 0.9); color: white; }
+.tag.algorithms { background-color: rgba(33, 150, 243, 0.9); color: white; }
+.tag.cloud { background-color: rgba(3, 169, 244, 0.9); color: white; }
+.tag.frontend { background-color: rgba(255, 87, 34, 0.9); color: white; }
+.tag.cybersecurity { background-color: rgba(96, 125, 139, 0.9); color: white; }
+.tag.devops { background-color: rgba(156, 39, 176, 0.9); color: white; }

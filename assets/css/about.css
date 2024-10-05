@@ -1,0 +1,102 @@
+/* About Page Styles */
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.about-title {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.about-lead {
+    font-size: 1.25rem;
+    color: var(--on-surface-medium);
+    text-align: center;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+
+.about-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.feature {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--surface-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.feature i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.stats {
+    font-size: 0.9rem;
+    color: var(--on-surface-color);
+    margin-bottom: 0.5rem;
+}
+
+.feature h2 {
+    font-size: 1.25rem;
+    color: var(--on-surface-color);
+    margin-bottom: 0.5rem;
+}
+
+.feature p {
+    font-size: 1rem;
+    color: var(--on-surface-medium);
+}
+
+.about-cta {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.about-cta p {
+    font-size: 1.1rem;
+    color: var(--on-surface-color);
+    margin-bottom: 1rem;
+}
+
+.about-cta .btn-primary {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+}
+
+/* Enhance floating shapes for About page */
+.about-container .floating-shape {
+    opacity: 0.05;
+    font-size: 36px;
+}
+
+@media (max-width: 768px) {
+    .about-title {
+        font-size: 2rem;
+    }
+
+    .about-lead {
+        font-size: 1.1rem;
+    }
+
+    .about-features {
+        grid-template-columns: 1fr;
+    }
+}
