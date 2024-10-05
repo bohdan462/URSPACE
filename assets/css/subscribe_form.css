@@ -1,11 +1,10 @@
-* Subscribe Form Styles */
-/* Subscribe Form Styles */
+
 .subscribe-form {
-    background-color: var(--bg-color);
+    background-color: rgba(var(--bg-color-rgb), 0.3);
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 100%;
+    max-width: 80%;
     margin: 0 auto;
     transition: all 0.3s ease;
 }
@@ -35,7 +34,7 @@
     padding: 0.75rem;
     border: 1px solid var(--on-surface-dim);
     border-radius: 8px;
-    background-color: var(--surface-color);
+    background-color: rgba(var(--bg-color-rgb), 0.3);
     color: var(--on-surface-color);
     font-size: 1rem;
     -webkit-appearance: none;
@@ -60,27 +59,6 @@
     background-size: 1rem auto;
 }
 
-.btn-primary {
-    display: block;
-    width: 100%;
-    padding: 0.75rem 1.5rem;
-    background-color: var(--primary-color);
-    color: var(--surface-color);
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 600;
-    text-align: center;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.btn-primary:hover,
-.btn-primary:focus {
-    background-color: var(--primary-color-dark);
-    transform: translateY(-2px);
-}
-
 @media (max-width: 768px) {
     .subscribe-form {
         padding: 1.5rem;
@@ -103,8 +81,5 @@
         font-size: 0.9rem;
     }
 
-    .btn-primary {
-        padding: 0.5rem 1rem;
-        font-size: 0.9rem;
-    }
+    
 }

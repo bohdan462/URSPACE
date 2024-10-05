@@ -74,26 +74,3 @@
     justify-content: center;
     margin-top: 30px;
 }
-
-.btn-confirm,
-.btn-cancel,
-.btn-primary {
-    padding: 12px 24px;
-    text-decoration: none;
-    color: var(--on-surface-color);
-    border-radius: 30px;
-    margin: 0 10px;
-    font-size: 14px;
-    border: none;
-    cursor: pointer;
-    letter-spacing: 0.03em;
-}
-
-.btn-confirm {
-    background-color: #E0245E;
-}
-
-.btn-cancel,
-.btn-primary {
-    background-color: var(--primary-color);
-}

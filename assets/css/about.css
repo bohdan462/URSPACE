@@ -34,6 +34,7 @@
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0.8;
 }
 
 .feature:hover {
@@ -92,15 +93,22 @@
         margin-bottom: 1rem;
     }
     
-    .about-cta .btn-primary {
+    .about-cta {
         display: inline-block;
-        padding: 1rem 1.5rem; 
+        padding: 1rem;
         font-size: 1.1rem;
-        margin: 0 auto; 
+        margin: 0 auto;
+        width: 200px;
+
+        /* margin: 0 auto;  */
         text-align: center;
     }
     
-    /* Enhance floating shapes for About page */
+    .about-container .floating-shape {
+        opacity: 0.05;
+        font-size: 36px;
+    }
+    
     .about-container .floating-shape {
         opacity: 0.05;
         font-size: 36px;
@@ -119,10 +127,7 @@
             grid-template-columns: 1fr;
         }
     
-        .about-cta .btn-primary {
-            width: 100%; 
-            padding: 1rem; 
-        }
+    
     }
     
     @media (max-width: 480px) {
@@ -169,40 +174,10 @@
             margin-bottom: 0.5rem;
         }
     
-        .about-cta .btn-primary {
-            width: 100%; 
-            padding: 1rem; 
-        }
-    
         .about-container .floating-shape {
             font-size: 24px;
         }
     }
-
-
-.about-cta {
-    text-align: center;
-    margin-top: 3rem;
-}
-
-.about-cta p {
-    font-size: 1.1rem;
-    color: var(--on-surface-color);
-    margin-bottom: 1rem;
-}
-
-.about-cta .btn-primary {
-    display: inline-block;
-    padding: 1.5rem;
-    font-size: 1.1rem;
-    margin: 0 auto; 
-}
-
-/* Enhance floating shapes for About page */
-.about-container .floating-shape {
-    opacity: 0.05;
-    font-size: 36px;
-}
 
 @media (max-width: 768px) {
     .about-title {
@@ -260,12 +235,6 @@
     .about-cta p {
         font-size: 1rem;
         margin-bottom: 0.5rem;
-    }
-
-    .about-cta .btn-primary {
-        padding: 1.5rem;
-        font-size: 1rem;
-        margin: 0 auto; /* Center the button */
     }
 
     .about-container .floating-shape {

@@ -1,89 +1,46 @@
 :root {
     /* Typography */
-    --base-font-size: 18px;
-    --type-scale: 1.25;
-    --h1: calc(var(--base-font-size) * var(--type-scale) * var(--type-scale) * var(--type-scale));
-    --h2: calc(var(--base-font-size) * var(--type-scale) * var(--type-scale));
+    --base-font-size: 20px;
+    --type-scale: 1.2;
+    --h1: calc(var(--base-font-size) * var(--type-scale) ** 3);
+    --h2: calc(var(--base-font-size) * var(--type-scale) ** 2);
     --h3: calc(var(--base-font-size) * var(--type-scale));
     --small: calc(var(--base-font-size) / var(--type-scale));
 
-    /* Line heights */
-    --line-height-tight: 1.2;
-    --line-height-normal: 1.5;
+    /* Line Heights */
+    --line-height-tight: 1.3;
+    --line-height-normal: 1.6;
     --line-height-loose: 1.8;
 
     /* Spacing */
     --space-unit: 1rem;
-    --space-xs: calc(0.25 * var(--space-unit));
-    --space-s: calc(0.5 * var(--space-unit));
-    --space-m: calc(1 * var(--space-unit));
-    --space-l: calc(1.5 * var(--space-unit));
-    --space-xl: calc(2 * var(--space-unit));
+    --space-xs: 0.25rem;
+    --space-s: 0.5rem;
+    --space-m: 1rem;
+    --space-l: 1.5rem;
+    --space-xl: 2rem;
 
-    /* Colors (keeping your existing color scheme) */
-    --bg-color: #121212;
-    --surface-color: #181818;
-    --surface-color-hover: #282828;
-    --primary-color: #1DB954;
-    --primary-color-dark: #1ED760;
-    --secondary-color: #FF6B6B;
-    --tertiary-color: #4ECDC4;
-    --on-surface-color: #FFFFFF;
-    --on-surface-medium: #B3B3B3;
-    --on-surface-dim: #A0A0A0;
-    --navbar-bg: #181818;
-    --navbar-shadow: rgba(0, 0, 0, 0.5);
-    --error-color: #E0245E;
-    
-    --surface-color-rgb: 24, 24, 24;
-    --primary-color-rgb: 29, 185, 84;
-}
+    /* Colors */
+    --bg-color: #0D0D0D;
+    --surface-color: #1A1A1A;
+    --surface-color-hover: #333333;
+    --primary-color: #00ADB5;
+    --secondary-color: #FF2E63;
+    --tertiary-color: #393E46;
+    --on-surface-color: #EEEEEE;
+    --on-surface-medium: #CCCCCC;
+    --on-surface-dim: #999999;
+    --navbar-bg: #1A1A1A;
+    --navbar-shadow: rgba(0, 0, 0, 0.7);
+    --error-color: #CF6679;
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        /* Typography */
-        --base-font-size: 18px;
-        --type-scale: 1.25;
-        --h1: calc(var(--base-font-size) * var(--type-scale) * var(--type-scale) * var(--type-scale));
-        --h2: calc(var(--base-font-size) * var(--type-scale) * var(--type-scale));
-        --h3: calc(var(--base-font-size) * var(--type-scale));
-        --small: calc(var(--base-font-size) / var(--type-scale));
-
-        /* Line heights */
-        --line-height-tight: 1.2;
-        --line-height-normal: 1.5;
-        --line-height-loose: 1.8;
-
-        /* Spacing */
-        --space-unit: 1rem;
-        --space-xs: calc(0.25 * var(--space-unit));
-        --space-s: calc(0.5 * var(--space-unit));
-        --space-m: calc(1 * var(--space-unit));
-        --space-l: calc(1.5 * var(--space-unit));
-        --space-xl: calc(2 * var(--space-unit));
-
-        /* Colors (keeping your existing color scheme) */
-        --bg-color: #121212;
-        --surface-color: #181818;
-        --surface-color-hover: #282828;
-        --primary-color: #1DB954;
-        --primary-color-dark: #1ED760;
-        --secondary-color: #FF6B6B;
-        --tertiary-color: #4ECDC4;
-        --on-surface-color: #FFFFFF;
-        --on-surface-medium: #B3B3B3;
-        --on-surface-dim: #A0A0A0;
-        --navbar-bg: #181818;
-        --navbar-shadow: rgba(0, 0, 0, 0.5);
-        --error-color: #E0245E;
-        
-        --surface-color-rgb: 24, 24, 24;
-        --primary-color-rgb: 29, 185, 84;
-    }
+    /* RGB Colors */
+    --surface-color-rgb: 26, 26, 26;
+    --primary-color-rgb: 0, 173, 181;
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: var(--base-font-size);
     line-height: var(--line-height-normal);
     color: var(--on-surface-color);
@@ -93,11 +50,10 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Merriweather', Georgia, serif;
+    font-family: 'Playfair Display', serif;
     color: var(--primary-color);
     line-height: var(--line-height-tight);
-    letter-spacing: 0.0em;
-    margin-top: var(--space-xl);
+    margin-top: var(--space-l);
     margin-bottom: var(--space-m);
 }
 
@@ -117,11 +73,11 @@ p {
 }
 
 blockquote {
-    font-family: 'Merriweather', Georgia, serif;
+    font-family: 'Playfair Display', serif;
     font-style: italic;
     font-size: var(--h3);
     color: var(--on-surface-medium);
-    border-left: 4px solid var(--primary-color);
+    border-left: 4px solid var(--secondary-color);
     padding-left: var(--space-m);
     margin: var(--space-l) 0;
 }
@@ -129,20 +85,22 @@ blockquote {
 code {
     font-family: 'Fira Code', monospace;
     font-size: var(--small);
-    background-color: rgba(var(--primary-color-rgb), 0.1);
+    background-color: rgba(var(--primary-color-rgb), 0.15);
     padding: var(--space-xs) var(--space-s);
-    border-radius: 3px;
+    border-radius: 4px;
 }
 
 pre code {
     display: block;
-    padding: 1em;
+    padding: var(--space-m);
     overflow-x: auto;
-    line-height: 1.4;
+    line-height: 1.5;
+    background-color: var(--surface-color);
+    border-radius: 6px;
 }
 
 strong {
-    font-weight: 600;
+    font-weight: 700;
     color: var(--on-surface-color);
 }
 
@@ -152,29 +110,30 @@ em {
 
 ul, ol {
     margin-bottom: var(--space-m);
-    padding-left: var(--space-s);
+    padding-left: calc(1.5 * var(--space-m));
 }
 
 li {
-    margin-bottom: 0.5em;
+    margin-bottom: 0.75em;
 }
 
 a {
-    transition: all 0.3s ease;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 a:hover {
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
-
 @media (max-width: 768px) {
-
     body {
-        letter-spacing: 0;
+        font-size: calc(var(--base-font-size) * 0.9);
     }
 
     h1, h2, h3, h4, h5, h6 {
-        letter-spacing: -0.01em;
+        margin-top: var(--space-m);
+        margin-bottom: var(--space-s);
     }
 }
