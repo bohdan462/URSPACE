@@ -1,0 +1,295 @@
+.home-container {
+    padding-top: 5%;
+}
+
+.post-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-l);
+    padding: var(--space-l) 0;
+}
+
+.welcome-message {
+    font-family: var(--font-serif);
+    font-size: var(--h2);
+    color: var(--primary-color);
+   
+    text-align: left;
+}
+
+.post-cell {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(var(--surface-color-rgb), 0.7);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.post-cell:hover {
+    background-color: var(--surface-color-hover);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    transform: translateY(-8px);
+}
+
+.post-link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+.post-image {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
+.post-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px; /* Adjust this value to control the gradient width */
+    height: 150px; /* Adjust this value to control the gradient height */
+    background: radial-gradient(circle at top left, rgba(0,0,0,0.3) 5%, rgba(0,0,0,0) 30%);
+    z-index: 1;
+    pointer-events: none; /* Ensures the gradient doesn't interfere with clicks */
+}
+
+.post-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.post-cell:hover .post-image img {
+    transform: scale(1.05);
+}
+
+.tag {
+    position: absolute;
+    top: var(--space-xs);
+    left: var(--space-xs);
+    padding: var(--space-xxs) var(--space-xs);
+    border-radius: 4px;
+    font-size: var(--small);
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: rgba(var(--primary-color-rgb), 0.2);
+    color: var(--surface-color);
+    z-index: 2; /* Ensure the tag is above the gradient */
+}
+
+.post-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: var(--space-m);
+    flex-grow: 1;
+    background-color: var(--surface-color);
+}
+
+.post-title {
+    font-family: var(--font-serif);
+    font-size: var(--h3);
+    font-weight: 700;
+    margin: 0 0 var(--space-xs) 0;
+    line-height: 1.2;
+    color: var(--on-surface-color);
+}
+
+.post-excerpt {
+    font-size: var(--small);
+    color: var(--on-surface-medium);
+    margin-bottom: var(--space-s);
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.post-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--small);
+    color: var(--on-surface-dim);
+    margin-top: auto;
+    padding-top: var(--space-s);
+    border-top: 1px solid rgba(var(--on-surface-dim-rgb), 0.1);
+}
+
+.post-time {
+    font-style: italic;
+    color: var(--on-surface-medium);
+}
+
+.post-stats span {
+    margin-left: var(--space-s);
+    display: inline-flex;
+    align-items: center;
+}
+
+.post-stats i {
+    margin-right: 5px;
+    color: var(--on-surface-medium);
+}
+
+.author-role {
+    font-size: var(--small);
+    color: var(--on-surface-medium);
+    display: block;
+}
+
+.post-author {
+    display: flex;
+    align-items: center;
+    margin-top: var(--space-s);
+    background-color: transparent;
+    padding: var(--space-xs) 0;
+    border-radius: 8px;
+}
+
+.post-author img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: var(--space-xs);
+    object-fit: cover;
+    border: none;
+}
+
+.author-name {
+    font-size: var(--small);
+    font-weight: 600;
+    color: var(--on-surface-color);
+    letter-spacing: 0.02em;
+}
+
+@media (max-width: 768px) {
+    .post-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: var(--space-m);
+    }
+
+    .post-cell {
+        margin-bottom: var(--space-m);
+    }
+
+    .post-content {
+        padding: var(--space-s);
+    }
+
+    .post-title {
+        font-size: var(--h3);
+    }
+
+    .post-excerpt {
+        font-size: var(--small);
+        margin-bottom: var(--space-s);
+    }
+
+    .post-meta,
+    .author-name {
+        font-size: calc(var(--small) * 0.9);
+    }
+
+    .post-author img {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .post-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .post-cell {
+        max-width: 100%;
+    }
+
+    .post-content {
+        padding: var(--space-s);
+    }
+
+    .post-title {
+        font-size: var(--h4);
+    }
+
+    .post-excerpt {
+        font-size: var(--small);
+        -webkit-line-clamp: 2;
+    }
+}
+
+.read-more-btn {
+    margin-top: var(--space-s);
+    padding: 10px 15px;
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    align-self: flex-start;
+}
+
+.read-more-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+}
+
+/* Update floating shapes color */
+.floating-shape {
+    color: rgba(var(--primary-color-rgb), 0.1);
+}
+
+/* Update navbar styles */
+.navbar {
+    background-color: var(--navbar-bg);
+    box-shadow: 0 2px 4px var(--navbar-shadow);
+}
+
+.logo {
+    color: var(--primary-color);
+}
+
+.search-bar input {
+    background-color: rgba(var(--surface-color-rgb), 0.5);
+    color: var(--on-surface-color);
+}
+
+.menu-toggle {
+    color: var(--on-surface-color);
+}
+
+/* Update side menu styles */
+.side-menu {
+    background-color: var(--surface-color);
+}
+
+.side-menu-links a {
+    color: var(--on-surface-color);
+}
+
+/* Update footer styles */
+.footer {
+    background-color: var(--surface-color);
+}
+
+.footer-links a,
+.footer-social a {
+    color: var(--on-surface-medium);
+}
+
+.footer-links a:hover,
+.footer-social a:hover {
+    color: var(--primary-color);
+}

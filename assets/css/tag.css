@@ -1,7 +1,6 @@
-
 .tag {
     position: absolute;
-    color: var(--surface-color);
+    color: var(--primary-color);
     top: 14px;
     left: 12px;
     display: inline-block;
@@ -9,17 +8,18 @@
     border-radius: 8px;
     font-size: 0.8rem;
     font-weight: 600;
-    box-shadow: 0 -4px 5px 10px  rgba(0, 0, 0, 0.1),
-                0 4px 5px 10px rgba(0, 0, 0, 0.1);
-
+    background-color: rgba(var(--primary-color-rgb), 0.2);
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    z-index: 1;
+    z-index: 2;
 }
+/* 
 
-.tag.productivity { background-color: rgba(76, 175, 80, 0.9); color: white; }
-.tag.algorithms { background-color: rgba(33, 150, 243, 0.9); color: white; }
-.tag.cloud { background-color: rgba(3, 169, 244, 0.9); color: white; }
-.tag.frontend { background-color: rgba(255, 87, 34, 0.9); color: white; }
-.tag.cybersecurity { background-color: rgba(96, 125, 139, 0.9); color: white; }
-.tag.devops { background-color: rgba(156, 39, 176, 0.9); color: white; }
+.post-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    flex-grow: 1;
+    background-color: var(--surface-color);
+} */

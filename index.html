@@ -8,14 +8,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 <body>
-    <div class="floating-shape shape1">{ }</div>
-    <div class="floating-shape shape2">( )</div>
-    <div class="floating-shape shape3">[ ]</div>
-    <div class="floating-shape shape4">&lt; &gt;</div>
-    <div class="floating-shape shape5">// </div>
-    <div class="floating-shape shape6">/* */</div>
-    <div class="floating-shape shape7">$ _</div>
-    <div class="floating-shape shape8"># !</div>
+    <!-- Floating shapes -->
+    <div class="floating-shapes">
+        <div class="floating-shape shape1">{ }</div>
+        <div class="floating-shape shape2">( )</div>
+        <div class="floating-shape shape3">[ ]</div>
+        <div class="floating-shape shape4">&lt; &gt;</div>
+        <div class="floating-shape shape5">// </div>
+        <div class="floating-shape shape6">/* */</div>
+        <div class="floating-shape shape7">$ _</div>
+        <div class="floating-shape shape8"># !</div>
+        <div class="floating-shape shape9">{ }</div>
+        <div class="floating-shape shape10">( )</div>
+        <div class="floating-shape shape11">[ ]</div>
+        <div class="floating-shape shape12">&lt; &gt;</div>
+        <div class="floating-shape shape13">// </div>
+        <div class="floating-shape shape14">/* */</div>
+        <div class="floating-shape shape15">$ _</div>
+        <div class="floating-shape shape16"># !</div>
+    </div>
 
     <header>
         <nav class="navbar">
@@ -23,7 +34,6 @@
                 <a href="index.html" class="logo">URSPACE</a>
                 <div class="search-bar">
                     <input type="text" placeholder="Search...">
-                    <!-- <button type="submit"><i class="fas fa-search"></i></button> -->
                 </div>
                 <button class="menu-toggle" aria-label="Toggle menu">
                     <i class="fas fa-bars"></i>
@@ -42,133 +52,177 @@
             <a href="pages/newpost.html" class="btn-new-post">New post</a>
         </div>
     </div>
-
-    <div class="home-container container">
-        <main>
-            <p class="welcome-message">Welcome back, <strong>Bohdan</strong></p>
-            <section class="post-grid">
-                <a href="pages/post1.html" class="post-cell">
-                    <span class="tag productivity">productivity</span>
-                    <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d" alt="laptop on desk">
-                    <div class="content">
-                        <h2>The Art of Productive Coding</h2>
-                        <p>Explore techniques to boost your coding efficiency and productivity.</p>
-                        <div class="meta">
-                            <span class="author">22h ago</span>
-                            <div class="stats">
+   
+    <main class="home-container container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li><a href="../pages/author.html">Account</a></li>
+                <li>Welcome, Bohdan!</li>
+            </ol>
+        </nav>
+        <h1 class="welcome-message">Your posts</h1>
+        <section class="post-grid">
+            <!-- Post Cell 1 -->
+            <article class="post-cell">
+                <a href="pages/post1.html" class="post-link">
+                    <div class="post-image">
+                        <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d" alt="laptop on desk">
+                        <span class="tag productivity">productivity</span>
+                    </div>
+                    <div class="post-content">
+                        <h2 class="post-title">The Art of Productive Coding</h2>
+                        <p class="post-excerpt">Explore techniques to boost your coding efficiency and productivity.</p>
+                        <div class="post-meta">
+                            <span class="post-time">22h ago</span>
+                            <div class="post-stats">
                                 <span><i class="fas fa-thumbs-up"></i> 145</span>
                                 <span><i class="fas fa-comment"></i> 28</span>
+                                <span><i class="fas fa-eye"></i> 1.2k</span> <!-- New view count -->
                             </div>
                         </div>
                         <div class="post-author">
-                            <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"" alt="Author Name">
-                            <a href="pages/author.html">@applewood</a>
+                            <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d" alt="Author Name">
+                            <div>
+                                <span class="author-name">@applewood</span>
+                                <span class="author-role">Software Engineer</span> <!-- New author role -->
+                            </div>
                         </div>
+                        <button class="read-more-btn">Read More</button> <!-- New Read More button -->
                     </div>
                 </a>
-                <a href="pages/post2.html" class="post-cell">
-                    <span class="tag algorithms">algorithms</span>
-                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97" alt="code on screen">
-                    <div class="content">
-                        
-                        <h2>Mastering Data Structures</h2>
-                        <p>A deep dive into essential data structures for efficient programming.</p>
-                        <div class="meta">
-                            <span class="author">1d ago</span>
-                            <div class="stats">
+            </article>
+
+            <!-- Post Cell 2 -->
+            <article class="post-cell">
+                <a href="pages/post2.html" class="post-link">
+                    <div class="post-image">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97" alt="code on screen">
+                        <span class="tag algorithms">algorithms</span>
+                    </div>
+                    <div class="post-content">
+                        <h2 class="post-title">Mastering Data Structures</h2>
+                        <p class="post-excerpt">A deep dive into essential data structures for efficient programming.</p>
+                        <div class="post-meta">
+                            <span class="post-time">1d ago</span>
+                            <div class="post-stats">
                                 <span><i class="fas fa-thumbs-up"></i> 132</span>
                                 <span><i class="fas fa-comment"></i> 23</span>
+                                <span><i class="fas fa-eye"></i> 980</span> <!-- New view count -->
                             </div>
                         </div>
                         <div class="post-author">
-                            <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"" alt="Author Name">
-                            <a href="pages/author.html">@43introtech</a>
+                            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97" alt="Author Name">
+                            <div>
+                                <span class="author-name">@43introtech</span>
+                                <span class="author-role">Data Scientist</span> <!-- New author role -->
+                            </div>
                         </div>
+                        <button class="read-more-btn">Read More</button> <!-- New Read More button -->
                     </div>
                 </a>
-                <a href="pages/post3.html" class="post-cell">
-                    <span class="tag cloud">lifestyle</span>
-                    <img src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e" alt="laptop and coffee">
-                    <div class="content">
-                       
-                        <h2>Balancing Work and Life as a Developer</h2>
-                        <p>Establishing boundaries between work and personal life is..</p>
-                        <div class="meta">
-                            <span class="author">24d ago</span>
-                            <div class="stats">
+            </article>
+
+            <!-- Post Cell 3 -->
+            <article class="post-cell">
+                <a href="pages/post3.html" class="post-link">
+                    <div class="post-image">
+                        <img src="https://images.unsplash.com/photo-1516116216624-53e697fedbea" alt="networking concept">
+                        <span class="tag networking">networking</span>
+                    </div>
+                    <div class="post-content">
+                        <h2 class="post-title">Understanding TCP/IP Protocols</h2>
+                        <p class="post-excerpt">Demystifying the backbone of internet communication.</p>
+                        <div class="post-meta">
+                            <span class="post-time">2d ago</span>
+                            <div class="post-stats">
                                 <span><i class="fas fa-thumbs-up"></i> 98</span>
                                 <span><i class="fas fa-comment"></i> 15</span>
                             </div>
                         </div>
                         <div class="post-author">
-                            <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"" alt="Author Name">
-                            <a href="pages/author.html">@canchie</a>
+                            <img src="https://images.unsplash.com/photo-1516116216624-53e697fedbea" alt="Author Name">
+                            <span class="author-name">@networkguru</span>
                         </div>
                     </div>
                 </a>
-                <a href="pages/post3.html" class="post-cell">
-                    <span class="tag frontend">frontend</span>
-                    <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb" alt="modern office space">
-                    <div class="content">
-                        
-                        <h2>Modern Frontend Frameworks Compared</h2>
-                        <p>An in-depth look at popular frontend frameworks and their use cases.</p>
-                        <div class="meta">
-                            <span class="author">1w ago</span>
-                            <div class="stats">
+            </article>
+
+            <!-- Post Cell 4 -->
+            <article class="post-cell">
+                <a href="pages/post4.html" class="post-link">
+                    <div class="post-image">
+                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5" alt="binary code">
+                        <span class="tag security">security</span>
+                    </div>
+                    <div class="post-content">
+                        <h2 class="post-title">Cybersecurity Best Practices</h2>
+                        <p class="post-excerpt">Essential tips to keep your digital life secure and private.</p>
+                        <div class="post-meta">
+                            <span class="post-time">3d ago</span>
+                            <div class="post-stats">
                                 <span><i class="fas fa-thumbs-up"></i> 210</span>
-                                <span><i class="fas fa-comment"></i> 45</span>
+                                <span><i class="fas fa-comment"></i> 42</span>
                             </div>
                         </div>
                         <div class="post-author">
-                            <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"" alt="Author Name">
-                            <a href="pages/author.html">@applewood</a>
+                            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5" alt="Author Name">
+                            <span class="author-name">@securitywizard</span>
                         </div>
                     </div>
                 </a>
-                <a href="pages/post3.html" class="post-cell">
-                    <span class="tag cybersecurity">cybersecurity</span>
-                    <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5" alt="binary code">
-                    <div class="content">
-                        
-                        <h2>Essential Security Practices for Developers</h2>
-                        <p>Key security measures every developer should implement in their projects.</p>
-                        <div class="meta">
-                            <span class="author">5m ago</span>
-                            <div class="stats">
+            </article>
+
+            <!-- Post Cell 5 -->
+            <article class="post-cell">
+                <a href="pages/post5.html" class="post-link">
+                    <div class="post-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" alt="machine learning concept">
+                        <span class="tag ai">AI</span>
+                    </div>
+                    <div class="post-content">
+                        <h2 class="post-title">Introduction to Machine Learning</h2>
+                        <p class="post-excerpt">Exploring the basics of ML and its real-world applications.</p>
+                        <div class="post-meta">
+                            <span class="post-time">4d ago</span>
+                            <div class="post-stats">
                                 <span><i class="fas fa-thumbs-up"></i> 178</span>
-                                <span><i class="fas fa-comment"></i> 32</span>
+                                <span><i class="fas fa-comment"></i> 36</span>
                             </div>
                         </div>
                         <div class="post-author">
-                            <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"" alt="Author Name">
-                            <a href="pages/author.html">@tech_talk</a>
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" alt="Author Name">
+                            <span class="author-name">@aiexplorer</span>
                         </div>
                     </div>
                 </a>
-                <a href="pages/post3.html" class="post-cell">
-                    <span class="tag devops">devops</span>
-                    <img src="https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2" alt="server room">
-                    <div class="content">
-                        
-                        <h2>Mastering CI/CD for Efficient Development</h2>
-                        <p>Streamline your development process with Continuous Integration and Deployment.</p>
-                        <div class="meta">
-                            <span class="author">3d ago</span>
-                            <div class="stats">
-                                <span><i class="fas fa-thumbs-up"></i> 145</span>
-                                <span><i class="fas fa-comment"></i> 28</span>
+            </article>
+
+            <!-- Post Cell 6 -->
+            <article class="post-cell">
+                <a href="pages/post6.html" class="post-link">
+                    <div class="post-image">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="web development">
+                        <span class="tag frontend">frontend</span>
+                    </div>
+                    <div class="post-content">
+                        <h2 class="post-title">Mastering CSS Grid Layout</h2>
+                        <p class="post-excerpt">A comprehensive guide to creating flexible and powerful layouts.</p>
+                        <div class="post-meta">
+                            <span class="post-time">5d ago</span>
+                            <div class="post-stats">
+                                <span><i class="fas fa-thumbs-up"></i> 156</span>
+                                <span><i class="fas fa-comment"></i> 29</span>
                             </div>
                         </div>
                         <div class="post-author">
-                            <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"" alt="Author Name">
-                            <a href="pages/author.html">@_devops</a>
+                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="Author Name">
+                            <span class="author-name">@cssmaster</span>
                         </div>
                     </div>
                 </a>
-            </section>
-        </main>
-    </div>
+            </article>
+        </section>
+    </main>
 
     <footer class="footer">
         <div class="container footer-content">
