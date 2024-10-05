@@ -220,11 +220,6 @@
         padding: 20px;
     }
 
-    .post-cell .content {
-        /* padding: 10px;
-    } */
-    }
-
     .post-title {
         font-size: var(--h2);
     }
