@@ -1,8 +1,8 @@
 /* About Page Styles */
 .about-container {
-    max-width: 700px;
-    margin: 0 auto; /* Center the container */
-    padding: 2rem 1rem; /* Add padding */
+    max-width: 800px;
+    margin: 0 auto; 
+    padding: 5rem;
 }
 
 .about-title {
@@ -60,10 +60,8 @@
 }
 
 .feature p {
-    font-size: 1rem;    .feature i {
-        font-size: 2.5rem;
-        color: var(--primary-color);
-        margin-bottom: 1rem;
+    font-size: 1rem;    
+    color: var(--on-surface-medium);
     }
     
     .stats {
@@ -96,9 +94,9 @@
     
     .about-cta .btn-primary {
         display: inline-block;
-        padding: 1rem 1.5rem; /* Adjust padding for better spacing */
+        padding: 1rem 1.5rem; 
         font-size: 1.1rem;
-        margin: 0 auto; /* Center the button */
+        margin: 0 auto; 
         text-align: center;
     }
     
@@ -122,14 +120,14 @@
         }
     
         .about-cta .btn-primary {
-            width: 100%; /* Ensure the button takes full width */
-            padding: 1rem; /* Adjust padding for better spacing */
+            width: 100%; 
+            padding: 1rem; 
         }
     }
     
     @media (max-width: 480px) {
         .about-container {
-            padding: 1rem; /* Adjust padding for smaller screens */
+            padding: 1rem; 
         }
     
         .about-title {
@@ -172,16 +170,15 @@
         }
     
         .about-cta .btn-primary {
-            width: 100%; /* Ensure the button takes full width */
-            padding: 1rem; /* Adjust padding for better spacing */
+            width: 100%; 
+            padding: 1rem; 
         }
     
         .about-container .floating-shape {
             font-size: 24px;
         }
     }
-    color: var(--on-surface-medium);
-}
+
 
 .about-cta {
     text-align: center;
@@ -198,7 +195,7 @@
     display: inline-block;
     padding: 1.5rem;
     font-size: 1.1rem;
-    margin: 0 auto; /* Center the button */
+    margin: 0 auto; 
 }
 
 /* Enhance floating shapes for About page */
