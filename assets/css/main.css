@@ -1,11 +1,10 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;700&family=Merriweather:wght@400;700&display=swap'); */
 @import url('variables.css');
 @import url('components.css');
-@import url('posts.css');
+@import url('post-detail.css');
 @import url('form.css');
 @import url('author.css');
 @import url('navbar.css');
-@import url('tag.css');
 @import url('footer.css');
 @import url('about.css');
 @import url('shapes.css');
@@ -34,36 +33,7 @@
 .post-cell:nth-child(5) { animation-delay: 0.5s; }
 .post-cell:nth-child(6) { animation-delay: 0.6s; }
 
-/* Text highlights */
-.highlight {
-    background-color: rgba(var(--primary-color-rgb), 0.1);
-    padding: 2px 4px;
-    border-radius: 4px;
-}
 
-/* Navigation */
-.breadcrumb {
-    display: flex;
-    list-style: none;
-    padding-top: 1rem;
-    margin: 20px 0;
-}
-
-.breadcrumb li {
-    display: flex;
-    align-items: center;
-}
-
-.breadcrumb li:not(:last-child)::after {
-    content: ">";
-    margin: 0 10px;
-    color: var(--on-surface-medium);
-}
-
-.breadcrumb a {
-    color: var(--primary-color);
-    text-decoration: none;
-}
 
 
 

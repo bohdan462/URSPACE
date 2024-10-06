@@ -30,6 +30,37 @@
         </nav>
     </header>
 
+    <main class="page-container">
+        <div class="subscribe-container">
+            <h1 class="page-title">Join URSPACE</h1>
+            <div class="subscribe-form">
+                <p>Get exclusive tech insights and updates delivered to your inbox.</p>
+                <form action="#" method="POST" id="subscribe-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="john@example.com">
+                    </div>
+                    <fieldset class="form-group">
+                        <legend>Areas of Interest</legend>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="interests" value="productivity"> Productivity & Tools</label>
+                            <label><input type="checkbox" name="interests" value="algorithms"> Algorithms & Data Structures</label>
+                            <label><input type="checkbox" name="interests" value="frontend"> Frontend Development</label>
+                            <label><input type="checkbox" name="interests" value="backend"> Backend Development</label>
+                            <label><input type="checkbox" name="interests" value="devops"> DevOps & Cloud Computing</label>
+                            <label><input type="checkbox" name="interests" value="ai"> AI & Machine Learning</label>
+                        </div>
+                    </fieldset>
+                    <button type="submit" class="btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
     <div class="side-menu">
         <button class="side-menu-close" aria-label="Close menu">
             <i class="fas fa-times"></i>
@@ -40,35 +71,6 @@
 
         </div>
     </div>
-
-    <main class="container">
-        <h1 class="page-title">Subscribe to URSPACE</h1>
-        <div class="subscribe-form">
-            <p>Get the latest tech insights and tutorials delivered to your inbox.</p>
-            <form action="#" method="POST">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required placeholder="Your name">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required placeholder="your@email.com">
-                </div>
-                <div class="form-group">
-                    <label for="interests">Interests (optional)</label>
-                    <select id="interests" name="interests" multiple>
-                        <option value="productivity">Productivity</option>
-                        <option value="algorithms">Algorithms</option>
-                        <option value="frontend">Frontend Development</option>
-                        <option value="backend">Backend Development</option>
-                        <option value="devops">DevOps</option>
-                        <option value="ai">Artificial Intelligence</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn-primary">Subscribe</button>
-            </form>
-        </div>
-    </main>
 
     <footer class="footer">
         <div class="container footer-content">
@@ -88,5 +90,6 @@
     </footer>
 
     <script src="../assets/js/side-menu.js"></script>
+    <script src="../assets/js/form-validation.js"></script>
 </body>
 </html>

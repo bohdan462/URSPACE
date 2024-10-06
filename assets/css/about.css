@@ -1,231 +1,155 @@
 /* About Page Styles */
 .about-container {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto; 
-    padding: 5rem;
+    padding: 3rem 1.5rem;
 }
 
 .about-title {
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: var(--primary-color);
     text-align: center;
     margin-bottom: 2rem;
+    animation: fadeInDown 0.8s ease-out;
 }
 
 .about-lead {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     color: var(--on-surface-medium);
     text-align: center;
     margin-bottom: 3rem;
     line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeIn 1s ease-out 0.3s both;
 }
 
 .about-features {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     margin-bottom: 3rem;
+    animation: fadeIn 1s ease-out 0.6s both;
 }
 
 .feature {
     text-align: center;
-    padding: 1.5rem;
-    background-color: var(--surface-color);
-    border-radius: 8px;
+    padding: 2rem;
+    background-color: rgba(var(--surface-color-rgb), 0.5);
+    border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    opacity: 0.8;
 }
 
 .feature:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 .feature i {
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: var(--primary-color);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
 }
 
-.stats {
-    font-size: 0.9rem;
-    color: var(--on-surface-color);
-    margin-bottom: 0.5rem;
+.feature:hover i {
+    transform: scale(1.1);
 }
 
 .feature h2 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     color: var(--on-surface-color);
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .feature p {
-    font-size: 1rem;    
+    font-size: 1.1rem;    
     color: var(--on-surface-medium);
-    }
-    
-    .stats {
-        font-size: 0.9rem;
-        color: var(--on-surface-color);
-        margin-bottom: 0.5rem;
-    }
-    
-    .feature h2 {
-        font-size: 1.25rem;
-        color: var(--on-surface-color);
-        margin-bottom: 0.5rem;
-    }
-    
-    .feature p {
-        font-size: 1rem;
-        color: var(--on-surface-medium);
-    }
-    
-    .about-cta {
-        text-align: center;
-        margin-top: 3rem;
-    }
-    
-    .about-cta p {
-        font-size: 1.1rem;
-        color: var(--on-surface-color);
-        margin-bottom: 1rem;
-    }
-    
-    .about-cta {
-        display: inline-block;
-        padding: 1rem;
-        font-size: 1.1rem;
-        margin: 0 auto;
-        width: 200px;
+    line-height: 1.6;
+}
 
-        /* margin: 0 auto;  */
-        text-align: center;
-    }
-    
-    .about-container .floating-shape {
-        opacity: 0.05;
-        font-size: 36px;
-    }
-    
-    .about-container .floating-shape {
-        opacity: 0.05;
-        font-size: 36px;
-    }
-    
-    @media (max-width: 768px) {
-        .about-title {
-            font-size: 2rem;
-        }
-    
-        .about-lead {
-            font-size: 1.1rem;
-        }
-    
-        .about-features {
-            grid-template-columns: 1fr;
-        }
-    
-    
-    }
-    
-    @media (max-width: 480px) {
-        .about-container {
-            padding: 1rem; 
-        }
-    
-        .about-title {
-            font-size: 1.75rem;
-            margin-bottom: 1.5rem;
-        }
-    
-        .about-lead {
-            font-size: 1rem;
-            margin-bottom: 2rem;
-        }
-    
-        .about-features {
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-    
-        .feature {
-            padding: 1rem;
-        }
-    
-        .feature i {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-    
-        .feature h2 {
-            font-size: 1rem;
-            margin-bottom: 0.25rem;
-        }
-    
-        .feature p {
-            font-size: 0.9rem;
-        }
-    
-        .about-cta p {
-            font-size: 1rem;
-            margin-bottom: 0.5rem;
-        }
-    
-        .about-container .floating-shape {
-            font-size: 24px;
-        }
-    }
+.about-cta {
+    text-align: center;
+    margin-top: 4rem;
+    animation: fadeIn 1s ease-out 0.9s both;
+}
 
+.about-cta p {
+    font-size: 1.2rem;
+    color: var(--on-surface-color);
+    margin-bottom: 1.5rem;
+}
+
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
     .about-title {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .about-lead {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 
-    .about-features {
-        grid-template-columns: 1fr;
+    .feature {
+        padding: 1.5rem;
+    }
+
+    .feature i {
+        font-size: 2.5rem;
+    }
+
+    .feature h2 {
+        font-size: 1.3rem;
+    }
+
+    .feature p {
+        font-size: 1rem;
     }
 }
 
 @media (max-width: 480px) {
     .about-container {
-        padding: 2rem;
+        padding: 2rem 1rem;
     }
 
     .about-title {
         font-size: 2rem;
-        margin-bottom: 1.5rem;
     }
 
     .about-lead {
-        font-size: 1rem;
-        margin-bottom: 2rem;
-    }
-
-    .about-features {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        margin-bottom: 2rem;
+        font-size: 1.1rem;
     }
 
     .feature {
-        padding: 1rem;
+        padding: 1.2rem;
     }
 
     .feature i {
         font-size: 2rem;
-        margin-bottom: 0.5rem;
     }
 
     .feature h2 {
-        font-size: 1rem;
-        margin-bottom: 0.25rem;
+        font-size: 1.2rem;
     }
 
     .feature p {
@@ -233,11 +157,11 @@
     }
 
     .about-cta p {
-        font-size: 1rem;
-        margin-bottom: 0.5rem;
+        font-size: 1.1rem;
     }
 
-    .about-container .floating-shape {
-        font-size: 24px;
-    }
+    /* .btn-primary {
+        padding: 0.8rem 1.5rem;
+        font-size: 1.1rem;
+    } */
 }

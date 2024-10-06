@@ -1,85 +1,152 @@
+.page-container {
+    padding-top: 50px;
+    min-height: calc(80vh - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+ 
+}
+
+.subscribe-container {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
 
 .subscribe-form {
-    background-color: rgba(var(--bg-color-rgb), 0.3);
+    background-color: rgba(var(--surface-color-rgb), 0.8);
     padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 80%;
-    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .subscribe-form p {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     color: var(--on-surface-color);
-    font-size: 1.2rem;
-    line-height: 1.6;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    text-align: center;
 }
 
 .form-group {
     margin-bottom: 1.5rem;
 }
 
-.form-group label {
+.form-group label,
+.form-group legend {
     display: block;
     margin-bottom: 0.5rem;
-    color: var(--on-surface-medium);
-    font-size: 1rem;
-    font-weight: 500;
+    color: var(--on-surface-color);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
-.form-group input,
-.form-group select {
+.form-group input[type="text"],
+.form-group input[type="email"] {
     width: 100%;
-    padding: 0.75rem;
-    border: 1px solid var(--on-surface-dim);
+    padding: 0.75rem 1rem;
+    border: none;
     border-radius: 8px;
-    background-color: rgba(var(--bg-color-rgb), 0.3);
+    background-color: rgba(var(--bg-color-rgb), 0.1);
     color: var(--on-surface-color);
     font-size: 1rem;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
     transition: all 0.3s ease;
 }
 
-.form-group input:focus,
-.form-group select:focus {
+.form-group input:focus {
     outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 2px rgba(var(--primary-color-rgb), 0.2);
+    background-color: rgba(var(--bg-color-rgb), 0.2);
+    box-shadow: 0 0 0 3px rgba(var(--primary-color-rgb), 0.2);
 }
 
-.form-group select {
-    height: auto;
-    padding-right: 2rem;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 0.7rem top 50%;
-    background-size: 1rem auto;
+.checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.75rem;
 }
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 0.5rem;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 4px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.checkbox-group input[type="checkbox"]:checked {
+    background-color: var(--primary-color);
+    position: relative;
+}
+
+.checkbox-group input[type="checkbox"]:checked::before {
+    content: '✓';
+    position: absolute;
+    color: white;
+    font-size: 0.8rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 
 @media (max-width: 768px) {
+    .page-container {
+        padding-top: 60px;
+    }
+
+    .subscribe-container {
+        padding: 1rem;
+    }
+
+    .page-title {
+        font-size: 2rem;
+    }
+
     .subscribe-form {
         padding: 1.5rem;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
     .subscribe-form p {
         font-size: 1rem;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
     }
 
-    .form-group label {
+    .form-group label,
+    .form-group legend {
+        font-size: 0.8rem;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"] {
+        padding: 0.6rem 0.8rem;
         font-size: 0.9rem;
     }
 
-    .form-group input,
-    .form-group select {
-        padding: 0.5rem;
-        font-size: 0.9rem;
-    }
 
-    
 }
