@@ -23,8 +23,8 @@
     margin-right: var(--space-s);
 }
 
-.post-detail {
-    background-color: rgba(24, 24, 24, 0.6); 
+    .post-detail {
+    background-color: rgba(var(--surface-color-rgb), 0.9); 
     backdrop-filter: blur(10px); 
     -webkit-backdrop-filter: blur(10px); 
     border-radius: 12px;
@@ -114,26 +114,8 @@
 .post-actions {
     margin-top: var(--space-m);
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
-
-/* .btn-edit, .btn-delete {
-    padding: var(--space-s) var(--space-m);
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: 600;
-    margin-left: var(--space-s);
-}
-
-.btn-edit {
-    background-color: var(--primary-color);
-    color: var(--surface-color);
-}
-
-.btn-delete {
-    background-color: #E0245E;
-    color: var(--surface-color);
-} */
 
 @media (max-width: 768px) {
     .post-content {

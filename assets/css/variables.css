@@ -54,17 +54,25 @@ body {
     font-size: var(--base-font-size);
     line-height: var(--line-height-normal);
     color: var(--on-surface-color);
-    background: linear-gradient(135deg, 
-        rgba(18, 18, 18, 0.95) 0%, 
-        rgba(30, 30, 30, 0.95) 50%, 
-        rgba(18, 18, 18, 0.95) 100%
-    );
-    background-attachment: fixed;
+    background-color: rgba(10, 10, 10, 0.5); /* Semi-transparent dark background */
+    backdrop-filter: blur(10px); /* Creates the glass effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari support */
     margin: 0;
     padding: 0;
 }
 
-body::after {
+/* Add this to ensure the glass effect is visible on the entire page */
+html {
+    background: linear-gradient(135deg, 
+        rgba(20, 20, 20, 1) 0%, 
+        rgba(40, 40, 40, 1) 50%, 
+        rgba(20, 20, 20, 1) 100%
+    );
+    background-attachment: fixed;
+    min-height: 100%;
+}
+
+/* body::after {
     content: "";
     position: fixed;
     top: 0;
@@ -75,7 +83,7 @@ body::after {
     opacity: 0.02;
     z-index: -1;
     pointer-events: none;
-}
+} */
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-serif);

@@ -7,7 +7,7 @@
 .breadcrumb {   
     display: flex;
     list-style: none;
-    padding-top: var(--space-m);
+    padding-top: var(--space-l);
     margin: var(--space-m) 0;
 }
 
@@ -34,39 +34,69 @@
     border-radius: var(--space-xs);
 }
 
-.btn-confirm,
-.btn-cancel,
-.btn-primary, 
-.btn-edit, 
-.btn-delete {
-    text-align: center;
-    width: 100%;
-    padding: 1rem;
-    font-size: 1.1rem;  
-    margin: 0.5rem;
+ /* Button styles */
+.btn {
+    display: inline-block;
+    min-width: 100px;
+    padding: var(--space-xs) var(--space-s);
+    font-size: 1rem;
     font-weight: 600;
-    color: var(--on-primary-color);
-    background-color: var(--primary-color);
-    border: none;
-    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin-top: 2rem;
+    background-color: transparent;
+   
+}
+
+.btn-primary {
+    margin-top: var(--space-s);
+        align-self: flex-start;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-secondary {
+    margin-top: var(--space-s);
+    align-self: flex-start;
+    
+    background-color: var(--bg-color);
+    border-color: var(--primary-color);
+}
+
+.btn-danger {
+    margin-top: var(--space-s);
+    align-self: flex-start;
+    color: var(--error-color);
+    border-color: var(--error-color);
+}
+
+.btn:hover {
+    background-color: rgba(var(--primary-color-rgb), 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: var(gree);
 }
 
 .btn-primary:hover {
-    background-color: var(--primary-color-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-.btn-confirm {
-    background-color: #E0245E;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
 }
 
-.btn-cancel,
-.btn-primary {
-    background-color: var(--primary-color);
+.btn-secondary:hover {
+    background-color: rgba(var(--on-surface-color-rgb), 0.1);
+    color: var(--quaternary-color);
 }
+
+.btn-danger:hover {
+    background-color: var(--error-color);
+    color: var(--bg-color);
+}
+
+
+
 
 @media (max-width: 768px) {
     .welcome-message {
@@ -75,7 +105,6 @@
     }
 }
 
-/* Media query for small screens */
 @media (max-width: 600px) {
     .home-container {
         margin: var(--space-xs);

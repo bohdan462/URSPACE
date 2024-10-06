@@ -1,0 +1,5 @@
+@import url('forms.css');
+
+.newpost-container {
+    max-width: 680px;
+}

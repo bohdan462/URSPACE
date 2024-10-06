@@ -3,8 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New post | URSPACE</title>
+    <title>Create New Post | URSPACE</title>
     <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/newpost.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 <body>
     <header>
@@ -12,8 +14,7 @@
             <div class="navbar-container">
                 <a href="../index.html" class="logo">URSPACE</a>
                 <div class="search-bar">
-                    <input type="text" placeholder="Search...">
-                    <!-- <button type="submit"><i class="fas fa-search"></i></button> -->
+                    <input type="text" placeholder="Search..." aria-label="Search">
                 </div>
                 <button class="menu-toggle" aria-label="Toggle menu">
                     <i class="fas fa-bars"></i>
@@ -28,53 +29,53 @@
         </button>
         <div class="side-menu-links">
             <a href="../index.html" class="btn-back">Back to Home</a>
-            <a href="pages/subscribe.html" class="btn-subscribe">Subscribe</a>
-            <a href="pages/newpost.html" class="btn-new-post">New post</a>
+            <a href="subscribe.html" class="btn-subscribe">Subscribe</a>
+            <a href="newpost.html" class="btn-new-post">New post</a>
         </div>
     </div>
 
-    <div class="container">
-        
-        <main>
-            <section class="form-container">
-                <h1>New post</h1>
-                <form action="../pages/post-created.html" method="get">
+    <main class="page-container">
+        <div class="form-container newpost-container">
+            <h1 class="page-title">Create New Post</h1>
+            <div class="form-wrapper">
+                <p>Share your thoughts and insights with the URSPACE community.</p>
+                <form action="../pages/post-created.html" method="get" id="newpost-form">
                     <div class="form-group">
                         <label for="title">Title</label>
-                        <input type="text" id="title" name="title" placeholder="enter title here..." required>
+                        <input type="text" id="title" name="title" required placeholder="Enter your post title" aria-required="true">
                     </div>
                     <div class="form-group">
                         <label for="subtitle">Subtitle</label>
-                        <input type="text" id="subtitle" name="subtitle" placeholder="enter subtitle here...">
+                        <input type="text" id="subtitle" name="subtitle" placeholder="Enter a subtitle (optional)">
                     </div>
                     <div class="form-group">
                         <label for="image-url">Image URL</label>
-                        <input type="url" id="image-url" name="image-url" placeholder="enter image url here...">
+                        <input type="url" id="image-url" name="image-url" placeholder="Enter the URL for your post image">
                     </div>
                     <div class="form-group">
                         <label for="tag">Tag</label>
-                        <select id="tag" name="tag" required>
+                        <select id="tag" name="tag" required aria-required="true">
                             <option value="">Select a tag</option>
                             <option value="programming">Programming</option>
                             <option value="career">Career</option>
                             <option value="lifestyle">Lifestyle</option>
-                            <option value="web development">Web Development</option>
+                            <option value="web-development">Web Development</option>
                             <option value="cybersecurity">Cybersecurity</option>
                             <option value="devops">DevOps</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="body">Body text</label>
-                        <textarea id="body" name="body" rows="10" placeholder="enter post content here..." required></textarea>
+                        <label for="body">Body</label>
+                        <textarea id="body" name="body" rows="10" required placeholder="Write your post content here..." aria-required="true"></textarea>
                     </div>
                     <div class="form-actions">
-                        <button type="submit">Create post</button>
-                        <a href="../index.html" class="btn-cancel">Cancel</a>
+                        <a href="../index.html" class="btn btn-secondary">Cancel</a>
+                        <button type="submit" class="btn btn-primary">Create Post</button>
                     </div>
                 </form>
-            </section>
-        </main>
-    </div>
+            </div>
+        </div>
+    </main>
     <script src="../assets/js/side-menu.js"></script>
 </body>
 </html>
