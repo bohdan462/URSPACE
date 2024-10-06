@@ -3,6 +3,7 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: var(--space-m);
+    padding-top: var(--space-xl);
 }
 
 .author-profile {
@@ -147,6 +148,8 @@
 }
 
 @media (min-width: 600px) {
+
+   
     .author-header {
         flex-direction: row;
         justify-content: flex-start;
@@ -186,12 +189,12 @@
         display: grid;
         grid-template-columns: 2fr 1fr;
         gap: var(--space-l);
-        padding: var(--space-l);
+        padding: var(--space-xxl);
     }
 
     .author-footer {
         grid-area: footer;
-        padding: var(--space-l);
+        padding: var(--space-xxl);
     }
 
     .featured-work {

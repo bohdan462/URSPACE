@@ -1,8 +1,10 @@
 /* About Page Styles */
 .about-container {
+    
     max-width: 1000px;
     margin: 0 auto; 
-    padding: 3rem 1.5rem;
+    padding: var(--space-m);
+    padding-top: var(--space-xxl);
 }
 
 .about-title {
@@ -128,10 +130,7 @@
 }
 
 @media (max-width: 480px) {
-    .about-container {
-        padding: 2rem 1rem;
-    }
-
+   
     .about-title {
         font-size: 2rem;
     }
