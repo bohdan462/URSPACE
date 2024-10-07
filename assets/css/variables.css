@@ -49,6 +49,7 @@
     --primary-color-rgb: 187, 134, 252;
 }
 
+
 body {
     font-family: var(--font-sans);
     font-size: var(--base-font-size);
