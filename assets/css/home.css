@@ -1,6 +1,6 @@
 .home-container {
-    padding-top: 3rem;
-    margin-top: calc(var(--navbar-height) + var(--space-xl));
+    padding-top: 2.5rem;
+    margin-top: calc(var(--navbar-height) + var(--space-l));
     min-height: calc(100vh - var(--navbar-height) - var(--footer-height));
     display: flex;
     flex-direction: column;
@@ -20,7 +20,6 @@
     font-weight: 400;
     padding-left: var(--space-s);
     border-left: 2px solid var(--primary-color);
-    line-height: var(--line-height-normal);
     text-align: left;
 }
 
@@ -129,7 +128,6 @@
             rgba(255, 255, 255, 0.03) 50%,
             rgba(255, 255, 255, 0.06) 100%
         );
-    filter: blur(3px);
     z-index: 1;
 }
 

@@ -1,4 +1,14 @@
 /* Image in Post Detail View */
+.post-container {
+    padding-top: 2.5rem;
+    margin-top: calc(var(--navbar-height) + var(--space-l));
+    min-height: calc(100vh - var(--navbar-height) - var(--footer-height));
+    display: flex;
+    flex-direction: column;
+    padding-left: var(--space-l);
+    padding-right: var(--space-l);
+}
+
 .post-title {
     font-family: var(--font-serif);
     font-size: var(--h1);
@@ -106,6 +116,7 @@
 .post-footer {
     margin-top: var(--space-m);
     padding-top: var(--space-m);
+    margin-bottom: var(--space-l);
     border-top: 1px solid var(--on-surface-dim);
     display: flex;
     justify-content: space-between;

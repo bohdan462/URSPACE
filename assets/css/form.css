@@ -11,6 +11,31 @@
     
 }
 
+.delete-confirm-container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding-top: 3em;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: rgba(var(--surface-color-rgb), 0.8);
+  
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.edit-success-container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding-top: 3em;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: rgba(var(--surface-color-rgb), 0.8);
+  
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+
 .form-container h1 {
     font-size: 2.5rem;
     color: var(--primary-color);
