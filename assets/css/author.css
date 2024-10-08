@@ -1,9 +1,10 @@
 /* Author Profile Specific CSS */
 .author-page {
-    max-width: 1200px;
+    max-width: 750px;
     margin: 0 auto;
     padding: var(--space-m);
     padding-top: var(--space-xl);
+    
 }
 
 .author-profile {

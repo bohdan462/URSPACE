@@ -1,13 +1,13 @@
-.container {
+.container {    
     max-width: 750px;
-    /* margin: var(--space-m) auto; */
+    margin: var(--space-s) auto;
     padding: var(--space-l);
 }
 
 .breadcrumb {   
     display: flex;
     list-style: none;
-    padding-top: var(--space-l);
+    padding-top: var(--space-s);
     margin: var(--space-m) 0;
 }
 
