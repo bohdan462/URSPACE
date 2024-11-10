@@ -9,8 +9,6 @@ Navigation Bar: A top navigation bar for easy access to different sections.
 Animations: CSS animations.
 Grid & Flexbox Layouts: Extensive use of CSS Grid and Flexbox for flexible and modern layout.
 Minimal JavaScript: The project primarily relies on HTML and CSS, with limited JavaScript usage.
-Usage
-
 Clone the Repository:
 Open in Browser: Navigate to the project directory, and open index.html in your browser to explore the site locally.
 Screenshots
