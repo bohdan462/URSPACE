@@ -6,7 +6,7 @@ Features
 
 Responsive Design: Multiple screens optimized for desktop, tablet, and mobile.
 Navigation Bar: A top navigation bar for easy access to different sections.
-Animations: Simple CSS animations for a smooth user experience.
+Animations: CSS animations.
 Grid & Flexbox Layouts: Extensive use of CSS Grid and Flexbox for flexible and modern layout.
 Minimal JavaScript: The project primarily relies on HTML and CSS, with limited JavaScript usage.
 Usage
