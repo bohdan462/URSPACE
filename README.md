@@ -16,16 +16,15 @@
 <img width="2560" alt="Screenshot 2024-11-10 at 4 23 48 PM" src="https://github.com/user-attachments/assets/0687c83b-efac-4ee5-a80d-63718ba0ea65">
 <img width="2560" alt="Screenshot 2024-11-10 at 4 24 28 PM" src="https://github.com/user-attachments/assets/d70e1fd9-02e0-4de8-8dec-153cd14ea8ef">
 
-Add screenshots here if you'd like to showcase specific sections.
 
-License
+## License
 
 URSPACE is open-source and free for anyone to use and modify.
 
-Contributing
+## Contributing
 
 Feel free to fork this repository and submit pull requests with any improvements or additional features.
 
-Contact
+## Contact
 
 For questions or suggestions, please reach out via the GitHub repository’s Issues page.
